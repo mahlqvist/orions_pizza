@@ -19,5 +19,5 @@ media
 .history
 
 # Environments and other #
-env/
+venv/
 navbar/
