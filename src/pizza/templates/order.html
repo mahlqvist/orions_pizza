@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="order">
+  <h2>Order Your Pizza</h2>
+
+  {% if note %}
+  <h3>{{ note }}</h3>
+  {% endif %}
+  
+  {% if created_pizza_key %}
+    <a href="{% url 'edit_order' created_pizza_key %}" id="edit-link" class="nav-link">Edit order</a>
+  {% endif %}
+  
+  <form action="{% url 'order' %}" method="post">
+    <fieldset>
+      <legend>Pizza</legend>
+      {% csrf_token %}
+      {{ pizzaform }}
+      <input type="submit" value="Place order">
+    </fieldset>
+  </form>
+  <h3>Multiple Order:</h3>
+  <form action="{% url 'pizzas' %}" method="get">
+   
+    <fieldset>
+      {{ multiple_form }}
+      <input type="submit" value="Order pizzas">
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="{% static 'images/aim.png' %}" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <title>Orion's Pizza</title>
+</head>
+<body>
+  <nav class="navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <div class="nav-logo">
+          <img src="{% static 'images/orion.png' %}" id="nav-logo" alt="logo">
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="{% url 'home' %}" class="nav-link"><span class="nav-text">Home</span></a>
+      </li>
+      <li class="nav-item">
+        <a href="{% url 'order' %}" class="nav-link"><span class="nav-text">Order</span></a>
+      </li>
+    </ul>
+  </nav>
+  <header class="hero-image">
+    <div class="wrapper">
+      {% block content %}
+      {% endblock %}
+    </div>
+    <footer><p>codeAim 2021</p></footer>
+  </header>
+</body>
+</html>
