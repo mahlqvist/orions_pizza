@@ -21,4 +21,4 @@ python manage.py runserver
 
 Open browser: [localhost](http://127.0.0.1:8000/admin/)
 
-Login and add types and sizes
+Login as admin to add pizza types and sizes
