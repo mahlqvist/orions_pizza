@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.timezone import now
 
 class PizzaType(models.Model):
   name = models.CharField(max_length=100)
@@ -17,3 +18,4 @@ class Pizza(models.Model):
   name = models.ForeignKey(PizzaType, on_delete=models.CASCADE)
   size = models.ForeignKey(Size, on_delete=models.CASCADE)
   extra = models.CharField(max_length=100, blank=True)
+  ordered = models.DateTimeField(default=now)

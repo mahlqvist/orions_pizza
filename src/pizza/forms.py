@@ -3,10 +3,10 @@ from .models import Pizza, PizzaType, Size
 
 # Using Forms
 # class PizzaForm(forms.Form):
-#   SIZE_CHOICES = [('small', 'small'), ('medium', 'medium'), ('large', 'large')]
+#   SIZE_CHOICES = [('small', 'Small'), ('medium', 'Medium'), ('large', 'Large')]
 #   PIZZA_CHOICES= [('Margherita', 'Margherita'), ('Hawaii', 'Hawaii'), ('Pepperoni', 'Pepperoni'), ('BBQ Chicken', 'BBQ Chicken')]
-#   pizza = forms.ChoiceField(label="Pizza:", choices=PIZZA_CHOICES)
-#   size = forms.ChoiceField(label="Size:", choices=SIZE_CHOICES)
+#   pizza = forms.ChoiceField(label="", choices=PIZZA_CHOICES, initial=None, required=True)
+#   size = forms.ChoiceField(label="", choices=SIZE_CHOICES)
 #   extra = forms.CharField(label="Extra topping:", max_length=10, required=False)
 
 # Using Model forms
